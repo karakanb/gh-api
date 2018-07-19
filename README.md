@@ -1,42 +1,50 @@
 # hn-api
-A simple microservice to parse HackerNews page to JSON.
-
+A simple microservice to parse GitHub Trending page to JSON.
 
 ## Request
-A simple GET request with a `url` parameter works.
 ```http
-GET https://hn-api.now.sh
+GET https://gh-api.now.sh
 ```
 
 ## Response
 ```json
 [
-	{
-		"title": "Google Duplex: An AI System for Accomplishing Real World Tasks Over the Phone",
-		"link": "https://ai.googleblog.com/2018/05/duplex-ai-system-for-natural-conversation.html",
-		"siteString": "googleblog.com",
-		"score": "1298 points",
-		"user": {
-			"name": "ivank",
-			"link": "user?id=ivank"
-		},
-		"age": "13 hours ago",
-		"commentCount": "529 comments",
-		"threadLink": "item?id=17022963"
-	},
-	{
-		"title": "A Short Introduction to the Art of Programming (1971) [pdf]",
-		"link": "https://www.cs.utexas.edu/users/EWD/ewd03xx/EWD316.PDF",
-		"siteString": "utexas.edu",
-		"score": "140 points",
-		"user": {
-			"name": "Rescis",
-			"link": "user?id=Rescis"
-		},
-		"age": "6 hours ago",
-		"commentCount": "13 comments",
-		"threadLink": "item?id=17026822"
-	}
+  {
+    "repo": {
+      "rawName": "InterviewMap / InterviewMap",
+      "owner": "InterviewMap",
+      "name": "InterviewMap",
+      "link": "/InterviewMap/InterviewMap",
+      "description": "Build the best interview map. The current content includes JS, network, browser related, performance optimization, security, framework, Git, data structure, algorithm, etc."
+    },
+    "stars": {
+      "count": 3897,
+      "link": "/InterviewMap/InterviewMap/stargazers"
+    },
+    "forks": {
+      "count": 382,
+      "link": "/InterviewMap/InterviewMap/network"
+    },
+    "todayStars": 652
+  },
+  {
+    "repo": {
+      "rawName": "donnemartin / system-design-primer",
+      "owner": "donnemartin",
+      "name": "system-design-primer",
+      "link": "/donnemartin/system-design-primer",
+      "description": "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards."
+    },
+    "stars": {
+      "count": 35648,
+      "link": "/donnemartin/system-design-primer/stargazers"
+    },
+    "forks": {
+      "count": 4503,
+      "link": "/donnemartin/system-design-primer/network"
+    },
+    "todayStars": 521
+  }
 ]
 ```
 
