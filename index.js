@@ -1,0 +1,52 @@
+const https = require('https');
+const parser = require('gh-trending-parser');
+const cache = require('micro-cacheable');
+const cors = require('micro-cors')();
+
+const responseFunction = (request, response) => {
+
+  // Set the request header and validate in case of invalid inputs.
+  response.setHeader('Content-Type', 'application/json');
+  var req = https.get('https://github.com/trending', function (res) {
+    var output = '';
+    res.setEncoding('utf8');
+
+    res.on('data', function (chunk) {
+      output += chunk;
+    });
+
+    res.on('end', function () {
+      const items = parser.parse(output);
+      response.end(JSON.stringify(items));
+    });
+  });
+
+  req.on('error', function (err) {
+    response.end(failure(err.message));
+  });
+}
+
+
+/**
+ * Return a JSON string with success message.
+ * @param {string} message 
+ */
+const success = (message) => {
+  return JSON.stringify({
+    success: true,
+    message: message
+  });
+}
+
+/**
+ * Return a JSON string with failure message.
+ * @param {string} message 
+ */
+const failure = (message) => {
+  return JSON.stringify({
+    success: false,
+    message: message
+  });
+}
+
+module.exports = cors(cache(5 * 1000, responseFunction))

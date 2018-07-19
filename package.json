@@ -1,0 +1,27 @@
+{
+  "name": "gh-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev"
+  },
+  "dependencies": {
+    "gh-trending-parser": "^0.1.0",
+    "micro": "latest",
+    "micro-cacheable": "^2.0.1",
+    "micro-cors": "^0.1.0"
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "micro-dev": "^2.2.2"
+  },
+  "now": {
+    "alias": "gh-api"
+  }
+}
