@@ -7,45 +7,30 @@ GET https://gh-api.now.sh
 ```
 
 ## Response
+An array of following JSON:
 ```json
-[
-  {
-    "repo": {
-      "rawName": "InterviewMap / InterviewMap",
-      "owner": "InterviewMap",
-      "name": "InterviewMap",
-      "link": "/InterviewMap/InterviewMap",
-      "description": "Build the best interview map. The current content includes JS, network, browser related, performance optimization, security, framework, Git, data structure, algorithm, etc."
-    },
-    "stars": {
-      "count": 3897,
-      "link": "/InterviewMap/InterviewMap/stargazers"
-    },
-    "forks": {
-      "count": 382,
-      "link": "/InterviewMap/InterviewMap/network"
-    },
-    "todayStars": 652
+{
+  "repo": {
+    "rawName": "phobal / ivideo",
+    "owner": "phobal",
+    "name": "ivideo",
+    "link": "/phobal/ivideo",
+    "description": "一个可以观看国内主流视频平台所有视频的客户端（Mac、Windows、Linux） A client that can watch video of domestic(China) mainstream video platform"
   },
-  {
-    "repo": {
-      "rawName": "donnemartin / system-design-primer",
-      "owner": "donnemartin",
-      "name": "system-design-primer",
-      "link": "/donnemartin/system-design-primer",
-      "description": "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards."
-    },
-    "stars": {
-      "count": 35648,
-      "link": "/donnemartin/system-design-primer/stargazers"
-    },
-    "forks": {
-      "count": 4503,
-      "link": "/donnemartin/system-design-primer/network"
-    },
-    "todayStars": 521
+  "stars": {
+    "count": 7603,
+    "link": "/phobal/ivideo/stargazers"
+  },
+  "forks": {
+    "count": 2087,
+    "link": "/phobal/ivideo/network"
+  },
+  "todayStars": 142,
+  "language": {
+    "is": "JavaScript",
+    "color": "#f1e05a"
   }
-]
+}
 ```
 
 ## License
