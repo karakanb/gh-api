@@ -1,4 +1,4 @@
-# hn-api
+# gh-api
 A simple microservice to parse GitHub Trending page to JSON.
 
 ## Request
